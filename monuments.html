@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>OT foix</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+	integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+	crossorigin=""/>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo de foix" width="122" height="64"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="monuments.html">Patrimoine</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="activités.html">Sports et Loisirs</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="terroir.html">Découvrir notre terroir</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="heberge.html">Hébergements</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="text" placeholder="Chercher" aria-label="Recherche">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+			</form>
+		</div>
+	</nav>
+
+	<!-- monuments -->
+	<h1 class="titre">Patrimoine</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="card" style="width: 20rem;">
+					<img class="card-img-top" src="img/chateaufiche.jpg" alt="chateau de fiches">
+					<div class="card-body">
+						<h4 class="card-title">Chateau de Fiches</h4>
+						<p class="card-text">Cette grande batisse du XVIème siècle, située à 1,5 km de Verniolle en Ariège abrite une merveille.</p>
+						<a href="#" class="btn btn-primary">+ d'informations</a>						
+						<button id="actionTarif" type="button" class="btn btn-info">Tarifs</button>
+						<div class="tarifs"></div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				<div class="card" style="width: 20rem;">
+					<img class="card-img-top" src="img/moulin.jpg" alt="moulin de laurede">
+					<div class="card-body">
+						<h4 class="card-title">Le moulin de la Laurede</h4>
+						<p class="card-text">Joli petit moulin à eau de montagne situé en pleine forêt.
+							Le Moulin n'est accessible qu'à pied, 1.5Km aller-retour, à parcourir sur un sentier bien entretenu.</p>
+							<a href="#" class="btn btn-primary">+ d'informations</a>
+							<button id="actionTarif2" type="button" class="btn btn-info">Tarifs</button>
+							<div class="tarifs2"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div id="mapid">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="card" style="width: 20rem;">
+						<img class="card-img-top" src="img/pontdiable.jpg" alt="pont du diable">
+						<div class="card-body">
+							<h4 class="card-title">Pont du diable</h4>
+							<p class="card-text">Vous profiterez de vues superbes sur les berges de l’Ariège, très escarpées en ces lieux.</p>
+							<a href="#" class="btn btn-primary">+ d'informations</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 20rem;">
+						<img class="card-img-top" src="img/labouiche.jpg" alt="rivière de labouiche">
+						<div class="card-body">
+							<h4 class="card-title">Rivière de Labouiche</h4>
+							<p class="card-text">Embarquez pour une croisière des plus insolites sur la "Venise Ariégeoise"!La visite est guidée et commentée à 60 m sous terre, confortablement assis dans une barque de 12 personnes.</p>
+							<a href="#" class="btn btn-primary">+ d'informations</a>
+							<button id="actionTarif3" type="button" class="btn btn-info">Tarifs</button>
+							<div class="tarifs3"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 20rem;">
+						<img class="card-img-top" src="img/forge.jpg" alt="Card image cap">
+						<div class="card-body">
+							<h4 class="card-title">Forges de Pyrène</h4>
+							<p class="card-text">Dans un cadre bucolique, un parc ombragé de 5 hectares, traversé par une rivière, se niche un village inoublié… </p>
+							<a href="#" class="btn btn-primary">+ d'informations</a>
+							<button id="actionTarif4" type="button" class="btn btn-info">Tarifs</button>
+							<div class="tarifs4"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="couleurfooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<ul class="taille">
+							<li><a href="presse.html">PRESSE</a></li>
+							<li><a href="groupe.html">GROUPES</a></li>
+							<li><a href="pratique.html">PRATIQUE</a></li>
+						</ul>
+					</div>
+					<div class="col-sm">
+						<span>Newsletter</span>
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon" id="sizing-addon1">@</span>
+							<input type="text" class="form-control" placeholder="Votre email" aria-label="Email" aria-describedby="sizing-addon1">
+						</div>
+					</div>
+					<div class="col-sm">
+						<span class="taille"><a href="#">Contactez-nous</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+	<script src="js/app.js"></script>
+	</html>

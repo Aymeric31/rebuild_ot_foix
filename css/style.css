@@ -1,0 +1,72 @@
+.hidden{
+	display: none;
+}
+.navbar{
+	padding: 0.1rem .8rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.titre{
+	text-align: center;
+	font-weight: bold;
+	font-size: 55px;
+	font-family: 'Encode Sans Condensed', sans-serif;
+	margin:20px 20px;
+}
+.d-block{
+	margin: auto;
+}
+.carousel-inner{
+	margin-bottom: 1%;
+}
+.carousel-inner h1,h2{
+	margin-bottom: 70px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100px;
+	font-family: 'Encode Sans Condensed', sans-serif;
+}
+span{
+	font-weight: bold;
+}
+h4{
+	font-size: 20px;
+}
+.card-title{
+	font-weight: bold;
+}
+table{
+	margin-top: 10px;
+}
+.monument{
+	margin-bottom: 1%;
+}
+
+.couleurfooter{
+	margin-top: 2%;
+	background-color: black;
+	color:white;
+	font-weight: bold;
+	font-family: 'Encode Sans Condensed', sans-serif;
+	padding-top: 15px;
+}
+.couleurfooter ul{
+	list-style-type: none;
+}
+.taille{
+	font-size: 30px;
+}
+a{
+	color: inherit;	
+}
+a:hover {
+	color: grey;
+	text-decoration: none;
+}
+#mapid {
+	height: 390px;
+	width: auto;
+}
+@media screen {
+	
+}

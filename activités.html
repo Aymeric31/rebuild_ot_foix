@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>OT foix</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+	integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+	crossorigin=""/>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo de foix" width="122" height="64"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="monuments.html">Patrimoine</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="activités.html">Sports et Loisirs</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="terroir.html">Découvrir notre terroir</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="heberge.html">Hébergements</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="text" placeholder="Chercher" aria-label="Recherche">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+			</form>
+		</div>
+	</nav>
+
+	<!-- monuments -->
+	<h1 class="titre">Activités</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="card" style="width: 20rem;">
+					<img class="card-img-top" src="img/parapente.jpg" alt="Parapente">
+					<div class="card-body">
+						<h4 class="card-title">Gypaetes parapente</h4>
+						<p class="card-text">L'école de Parapente Les Gypaetes, labellisée FFVL, agréée Jeunesse et Sport existe depuis 2001.</p>
+						<a href="#" class="btn btn-primary">+ d'informations</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				<div class="card" style="width: 20rem;">
+					<img class="card-img-top" src="img/canoekayak.jpg" alt="canoe kayak">
+					<div class="card-body">
+						<h4 class="card-title">Canoë-Kayak et rafting</h4>
+						<p class="card-text">La rivière Ariège et le Stade d'Eau Vive du Rebech à Foix offrent le site idéal pour une découverte des sports d'eau vive.</p>
+						<a href="#" class="btn btn-primary">+ d'informations</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col">
+				<div id="mapid">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="card" style="width: 20rem;">
+					<img class="card-img-top" src="img/pyrenevasion.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h4 class="card-title">Pyrénévasion</h4>
+						<p class="card-text">Découvrez les canyons Ariégeois ou bien venez pratiquer le VTT et la randonnée en montagne.</p>
+						<a href="#" class="btn btn-primary">+ d'informations</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 20rem;">
+					<img class="card-img-top" src="img/randoneige.jpg" alt="randonnée dans la neige">
+					<div class="card-body">
+						<h4 class="card-title">Le dahu ariègois</h4>
+						<p class="card-text">Coach sportif propose des stages trails et des "trails voyages" sur les Pyrénées adaptés à votre objectif !</p>
+						<a href="#" class="btn btn-primary">+ d'informations</a>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 20rem;">
+					<img class="card-img-top" src="img/caleche.jpg" alt="Caleche">
+					<div class="card-body">
+						<h4 class="card-title">Les carcis</h4>
+						<p class="card-text">Venez découvrir et partager, le temps de quelques heures ou d'une journée et dans un cadre montagnard au coeur de la vallée de la Barguillère.</p>
+						<a href="#" class="btn btn-primary">+ d'informations</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="couleurfooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm">
+					<ul class="taille">
+						<li><a href="presse.html">PRESSE</a></li>
+						<li><a href="groupe.html">GROUPES</a></li>
+						<li><a href="pratique.html">PRATIQUE</a></li>
+					</ul>
+				</div>
+				<div class="col-sm">
+					<span>Newsletter</span>
+					<div class="input-group input-group-lg">
+						<span class="input-group-addon" id="sizing-addon1">@</span>
+						<input type="text" class="form-control" placeholder="Votre email" aria-label="Email" aria-describedby="sizing-addon1">
+					</div>
+				</div>
+				<div class="col-sm">
+					<span class="taille"><a href="#">Contactez-nous</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
+</html>
