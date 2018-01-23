@@ -1,6 +1,14 @@
 .hidden{
 	display: none;
 }
+.fa-stack{
+	font-size: 10em;
+	line-height: 250px;
+}
+.fa-stack-3x {
+	font-size:91px;
+	margin-right: 40px;
+}
 .navbar{
 	padding: 0.1rem .8rem;
 	font-weight: bold;
