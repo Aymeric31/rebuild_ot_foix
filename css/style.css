@@ -1,13 +1,28 @@
 .hidden{
 	display: none;
 }
+.nav-item{
+	font-size: 30px;
+}
+.btn{
+	margin: 5px 1px;
+	box-shadow: 2px 2px 8px black;
+}
 .fa-stack{
 	font-size: 10em;
 	line-height: 250px;
+	width: 300px;
 }
 .fa-stack-3x {
 	font-size:91px;
 	margin-right: 40px;
+}
+.bigcalendar{
+	font-size: 323px;
+}
+.bigmsg{
+	font-size: 302px;
+
 }
 .navbar{
 	padding: 0.1rem .8rem;
