@@ -1,12 +1,21 @@
 .hidden{
 	display: none;
 }
+nav h1{
+	font-weight: bold;
+	font-size: 55px;
+	font-family: 'Encode Sans Condensed', sans-serif;
+}
 .nav-item{
 	font-size: 30px;
 }
 .btn{
 	margin: 5px 1px;
 	box-shadow: 2px 2px 8px black;
+}
+.buttonaccueil .btn{
+	padding: 20px 10px;
+	margin: 25px 0px;
 }
 .fa-stack{
 	font-size: 10em;
@@ -20,11 +29,11 @@
 .bigcalendar{
 	font-size: 323px;
 }
-.bigmsg{
+.biglogo{
 	font-size: 302px;
 }
-.bigball{
-	font-size: 300px;
+.btnicon{
+	width: 327px;
 }
 .navbar{
 	padding: 0.1rem .8rem;
@@ -58,7 +67,14 @@ h4{
 	font-size: 20px;
 }
 .card-title{
+	font-size: 60px;
 	font-weight: bold;
+}
+.card{
+	font-size: 50px;
+}
+.card .btn{
+	font-size: 45px;
 }
 table{
 	margin-top: 10px;
@@ -66,31 +82,21 @@ table{
 .monument{
 	margin-bottom: 1%;
 }
-
-.couleurfooter{
-	margin-top: 2%;
-	background-color: black;
-	color:white;
-	font-weight: bold;
-	font-family: 'Encode Sans Condensed', sans-serif;
-	padding-top: 15px;
+.footeur{
+	font-size: 45px;
 }
-.couleurfooter ul{
-	list-style-type: none;
+.footeur .btn{
+	font-size: 50px;
 }
 .taille{
 	font-size: 30px;
 }
-a{
-	color: inherit;	
-}
-a:hover {
-	color: grey;
-	text-decoration: none;
-}
 #mapid {
 	height: 390px;
 	width: auto;
+}
+.centersend{
+	text-align: center;
 }
 @media screen {
 	

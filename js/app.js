@@ -1,5 +1,6 @@
 	jQuery(document).ready(function(){
 		var mymap = L.map('mapid').setView([42.850, 1.65], 9);
+		mymap.scrollWheelZoom.disable();
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			maxZoom: 18,
@@ -11,6 +12,12 @@
 		function afficheTarif() {
 			$( "#actionTarif" ).click(function() {
 				$(".tarifs").append("<table class='table table-bordered table-dark'><tr><td>Entrée adultes</td><td>5€</td></tr><tr><td>Entrée groupes</td><td>4€</td></tr></table>");
+			});
+		}
+		afficheTarif1();
+		function afficheTarif1() {
+			$( "#actionTarif1" ).click(function() {
+				$(".tarifs1").append("<table class='table table-bordered table-dark'><tr><td>Entrée junior (à 5 à 17 ans)</td><td>4.50€</td></tr><tr><td>Entrée adulte</td><td>6,70€</td></tr><tr><td>Entrée étudiant</td><td>5,30€</td></tr><tr><td>Entrée groupe junior</td><td>4,50€</td></tr><tr><td>Entrée groupes étudiant</td><td>4,70€</td></tr><tr><td>Entrée groupe adulte</td><td>5.40€</td></tr><tr><td>Pass Famille (2A-2E)</td><td>21€</td></tr></table>");
 			});
 		}
 		afficheTarif2();
@@ -28,7 +35,7 @@
 		afficheTarif4();
 		function afficheTarif4() {
 			$( "#actionTarif4" ).click(function() {
-				$(".tarifs4").append("<table class='table table-bordered table-dark'><tr><td>Entrée junior (à 5 à 18 ans)</td><td>6€</td></tr><tr><td>Entrée adulte</td><td>8,80€</td></tr><tr><td>Entrée étudiant</td><td>7,30€</td></tr><tr><td>Entrée groupe junior</td><td>4,50€</td></tr><tr><td>Entrée groupes étudiant</td><td>5,80€</td></tr><tr><td>Entrée groupe adulte</td><td>7€</td></tr><tr><td>Pass Famille (2A-2E)</td><td>26€€</td></tr><tr><td>Pass famille enfants supplémentaire</td><td>4€</td></tr></table>");
+				$(".tarifs4").append("<table class='table table-bordered table-dark'><tr><td>Entrée junior (à 5 à 18 ans)</td><td>6€</td></tr><tr><td>Entrée adulte</td><td>8,80€</td></tr><tr><td>Entrée étudiant</td><td>7,30€</td></tr><tr><td>Entrée groupe junior</td><td>4,50€</td></tr><tr><td>Entrée groupes étudiant</td><td>5,80€</td></tr><tr><td>Entrée groupe adulte</td><td>7€</td></tr><tr><td>Pass Famille (2A-2E)</td><td>26€</td></tr><tr><td>Pass famille enfants supplémentaire</td><td>4€</td></tr></table>");
 			});
 		}
 	});
